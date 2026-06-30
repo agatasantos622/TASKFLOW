@@ -18,6 +18,10 @@ Projeto desenvolvido para aplicação prática dos conceitos de Engenharia de So
 
 ## 📖 Sobre o Projeto
 
+O **TaskFlow** é uma aplicação web desenvolvida para simular o gerenciamento de tarefas em um ambiente de desenvolvimento ágil. O projeto foi criado como atividade prática da disciplina de Engenharia de Software, aplicando conceitos de planejamento, documentação, versionamento, testes automatizados e integração contínua.
+
+A aplicação permite gerenciar tarefas por meio das operações de criação, consulta, edição e exclusão (CRUD), proporcionando uma base para a aplicação de boas práticas de desenvolvimento e gestão de projetos.
+
 ---
 
 ## 🎯 Objetivos
