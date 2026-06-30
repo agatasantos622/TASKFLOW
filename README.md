@@ -8,7 +8,7 @@ Projeto desenvolvido para aplicação prática dos conceitos de Engenharia de So
 
 </p>
 
-![Python](https://img.shields.io/badge/Python-3.x-1E3A8A?style=for-the-badge&logo=python&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.12.10-1E3A8A?style=for-the-badge&logo=python&logoColor=white)
 
 ![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-5B21B6?style=for-the-badge)
 
