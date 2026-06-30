@@ -98,6 +98,36 @@ Essa organização busca facilitar a leitura do código, a colaboração entre d
 
 ## 📂 Estrutura de Pastas
 
+```text
+TaskFlow/
+│
+├── .github/
+│   └── workflows/
+│
+├── docs/
+│   ├── diagrams/
+│   ├── images/
+│   └── reports/
+│
+├── src/
+│
+├── tests/
+│
+├── .gitignore
+├── LICENSE
+├── README.md
+└── requirements.txt
+```
+
+### Descrição dos diretórios
+
+| Diretório | Descrição |
+|-----------|-----------|
+| `.github/workflows` | Configuração do GitHub Actions para integração contínua. |
+| `docs` | Documentação do projeto, diagramas e imagens. |
+| `src` | Código-fonte da aplicação. |
+| `tests` | Testes automatizados. |
+
 ---
 
 ## ⚙️ Como Executar
