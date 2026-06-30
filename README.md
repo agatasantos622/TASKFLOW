@@ -64,6 +64,21 @@ Como parte da simulação de mudança de escopo do projeto, será adicionada a f
 
 ## 🛠️ Tecnologias
 
+As seguintes tecnologias e ferramentas foram utilizadas no desenvolvimento do projeto:
+
+| Tecnologia | Finalidade |
+|------------|------------|
+| Python | Linguagem principal da aplicação |
+| Flask | Framework para desenvolvimento da aplicação web |
+| HTML5 | Estrutura das páginas |
+| CSS3 | Estilização da interface |
+| Git | Controle de versão |
+| GitHub | Hospedagem do repositório e gerenciamento do projeto |
+| GitHub Projects | Organização das tarefas utilizando Kanban |
+| GitHub Actions | Integração contínua e execução automatizada dos testes |
+| Pytest | Testes automatizados |
+| Visual Studio Code | Ambiente de desenvolvimento |
+
 ---
 
 ## 🏗️ Arquitetura do Projeto
