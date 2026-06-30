@@ -42,6 +42,24 @@ Desenvolver uma aplicação web para gerenciamento de tarefas, aplicando conceit
 
 ## ✨ Funcionalidades
 
+A primeira versão do **TaskFlow** contempla as funcionalidades essenciais para o gerenciamento de tarefas.
+
+### Funcionalidades implementadas
+
+- ➕ Criar novas tarefas.
+- 📋 Visualizar a lista de tarefas cadastradas.
+- ✏️ Editar informações de uma tarefa.
+- 🗑️ Excluir tarefas.
+- ✅ Marcar tarefas como concluídas.
+
+### Funcionalidade planejada
+
+Como parte da simulação de mudança de escopo do projeto, será adicionada a funcionalidade de definição de prioridade das tarefas, permitindo classificá-las como:
+
+- 🟢 Baixa
+- 🟡 Média
+- 🔴 Alta
+
 ---
 
 ## 🛠️ Tecnologias
