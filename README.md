@@ -26,6 +26,18 @@ A aplicação permite gerenciar tarefas por meio das operações de criação, c
 
 ## 🎯 Objetivos
 
+### Objetivo Geral
+
+Desenvolver uma aplicação web para gerenciamento de tarefas, aplicando conceitos de Engenharia de Software, metodologias ágeis, testes automatizados e integração contínua.
+
+### Objetivos Específicos
+
+- Desenvolver um sistema CRUD para gerenciamento de tarefas.
+- Aplicar versionamento utilizando Git e GitHub.
+- Organizar o desenvolvimento utilizando Kanban.
+- Automatizar testes por meio do GitHub Actions.
+- Documentar todas as etapas do projeto.
+
 ---
 
 ## ✨ Funcionalidades
