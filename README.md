@@ -83,6 +83,17 @@ As seguintes tecnologias e ferramentas foram utilizadas no desenvolvimento do pr
 
 ## 🏗️ Arquitetura do Projeto
 
+O **TaskFlow** foi organizado utilizando uma estrutura inspirada no padrão **Model-View-Controller (MVC)**, promovendo uma separação entre as responsabilidades da aplicação e facilitando sua manutenção e evolução.
+
+Cada diretório possui uma função específica:
+
+- **src/**: contém o código-fonte da aplicação.
+- **tests/**: reúne os testes automatizados.
+- **docs/**: centraliza a documentação, diagramas e imagens do projeto.
+- **.github/workflows/**: armazena os arquivos responsáveis pela integração contínua utilizando GitHub Actions.
+
+Essa organização busca facilitar a leitura do código, a colaboração entre desenvolvedores e a escalabilidade do projeto.
+
 ---
 
 ## 📂 Estrutura de Pastas
