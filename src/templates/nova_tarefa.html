@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Nova Tarefa</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+<a href="/" class="back-link">← Voltar</a>
+    <main>
+            
+        <section class="form-container">
+
+        <h1>Nova Tarefa</h1>
+
+        <p>
+            Preencha os dados da sua nova tarefa.
+        </p>
+
+            <form method="POST">
+
+                <label for="titulo">Título</label>
+                <input
+                    type="text"
+                    id="titulo"
+                    name="titulo"
+                    placeholder="Digite o título da tarefa"
+                    required>
+
+                <label for="descricao">Descrição</label>
+                <textarea
+                    id="descricao"
+                    name="descricao"
+                    placeholder="Descreva sua tarefa"
+                    required></textarea>
+                
+                <div class="status-group">
+                <label>Status</label>
+                    
+                    <div>
+                        <input
+                            type="radio"
+                            id="pendente"
+                            name="status"
+                            value="pendente"
+                            required>
+                        <label for="pendente">Pendente</label>
+                    </div>
+                    
+                    <div>
+                        <input
+                            type="radio"
+                            id="andamento"
+                            name="status"
+                            value="em_andamento"
+                            required>
+                        <label for="andamento">Em andamento</label>
+                    </div>
+
+                    <div>
+                        <input
+                            type="radio"
+                            id="concluida"
+                            name="status"
+                            value="concluida"
+                            required>
+                        <label for="concluida">Concluída</label>
+                    </div>
+                
+                </div>
+                
+                <button type="submit">
+                    Salvar
+                </button>
+            
+            </form>    
+
+        </section>
+
+    </main>
+
+</body>
+</html>
+
+

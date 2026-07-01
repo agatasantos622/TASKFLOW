@@ -25,48 +25,34 @@ main {
 
 /* ===== Hero ===== */
 
-.hero {
-    text-align: center;
+.hero h1,
+.form-container h1 {
+    font-size: 3rem;
+    color: #1d4ed8;
+    margin-bottom: 15px;
+}
+
+.hero p,
+.form-container p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+/* ===== Formulário ===== */
+
+.form-container {
+    width: 100%;
     max-width: 600px;
     padding: 20px;
+    text-align: center;
 }
 
-/* ===== Botões ===== */
-
-.buttons {
+form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    align-items: center;
-}
-
-.buttons button {
-    width: 220px;
-    padding: 14px;
-    font-size: 1rem;
-    font-weight: bold;
-
-    border: none;
-    border-radius: 8px;
-
-    cursor: pointer;
-
-    transition: 0.3s;
-}
-
-.buttons button:first-child {
-    background-color: #2563eb;
-    color: white;
-}
-
-.buttons button:last-child {
-    background-color: white;
-    color: #2563eb;
-    border: 2px solid #2563eb;
-}
-
-.buttons button:hover {
-    transform: translateY(-2px);
+    gap: 18px;
+    margin-top: 30px;
 }
 
 /* ===== Títulos ===== */
@@ -90,6 +76,50 @@ main {
     line-height: 1.6;
     margin-bottom: 35px;
 }
+
+/* ===== Botões ===== */
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.buttons a {
+    display: inline-block;
+    
+    width: 220px;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: bold;
+
+    text-decoration: none;
+    text-align: center;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.buttons a:first-child{
+    background-color: #2563eb;
+    color: white;
+}
+
+.buttons a:last-child{
+    background-color: white;
+    color: #2563eb;
+    border: 2px solid #2563eb;
+}
+
+.buttons a:hover{
+    transform: translateY(-2px);
+}
+
 
 /* ===== Footer ===== */
 
