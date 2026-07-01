@@ -1,0 +1,105 @@
+/* ===== Reset ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Body ===== */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eef2f5;
+    color: #2c3e50;
+}
+
+/* ===== Main ===== */
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+}
+
+/* ===== Hero ===== */
+
+.hero {
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+}
+
+/* ===== Botões ===== */
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.buttons button {
+    width: 220px;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: bold;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.buttons button:first-child {
+    background-color: #2563eb;
+    color: white;
+}
+
+.buttons button:last-child {
+    background-color: white;
+    color: #2563eb;
+    border: 2px solid #2563eb;
+}
+
+.buttons button:hover {
+    transform: translateY(-2px);
+}
+
+/* ===== Títulos ===== */
+
+.hero h1 {
+    font-size: 3rem;
+    color: #1d4ed8;
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+/* ===== Descrição ===== */
+
+.hero p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+/* ===== Footer ===== */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+footer p:first-child {
+    margin-bottom: 5px;
+}
