@@ -32,6 +32,24 @@ def excluir_tarefa(id):
 
     return redirect(url_for("listar_tarefas"))
 
+@app.route("/editar/<int:id>", methods=["GET", "POST"])
+def editar_tarefa(id):
+
+    if request.method == "POST":
+
+            tarefas[id]["titulo"] = request.form["titulo"]
+            tarefas[id]["descricao"] = request.form["descricao"]
+            tarefas[id]["status"] = request.form["status"]
+
+            return redirect(url_for("listar_tarefas"))
+
+    tarefa = tarefas[id]
+
+    return render_template(
+        "editar_tarefa.html",
+        tarefa=tarefa
+    )
+
 @app.route("/tarefas")
 def listar_tarefas():
 

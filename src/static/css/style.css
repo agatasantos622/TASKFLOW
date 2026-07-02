@@ -136,7 +136,10 @@ form {
     transform: translateY(-2px);
 }
 
-.edit-button {
+.edit-button,
+.delete-button {
+    text-decoration: none;
+    text-align: center;
     background-color: #2563eb;
     color: white;
 }

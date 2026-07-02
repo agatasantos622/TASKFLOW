@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Tarefa</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+
+    <a href="/tarefas" class="back-link">← Voltar</a>
+
+    <main>
+
+        <section class="form-container">
+
+            <form method="POST">
+
+                <label for="titulo">Título</label>
+                <input
+                    type="text"
+                    id="titulo"
+                    name="titulo"
+                    value="{{ tarefa.titulo }}"
+                    required>
+
+                <label for="descricao">Descrição</label>
+                <textarea
+                    id="descricao"
+                    name="descricao"
+                    required>{{ tarefa.descricao }}</textarea>
+
+                <div class="status-group">
+
+                    <label>Status</label>
+
+                    <div>
+
+                        <input
+                            type="radio"
+                            id="pendente"
+                            name="status"
+                            value="pendente"
+                            {% if tarefa.status == "pendente" %}checked{% endif %}>
+
+                        <label for="pendente">Pendente</label>
+
+                    </div>
+
+                    <div>
+
+                        <input
+                            type="radio"
+                            id="andamento"
+                            name="status"
+                            value="em_andamento"
+                            {% if tarefa.status == "em_andamento" %}checked{% endif %}>
+
+                        <label for="andamento">Em andamento</label>
+
+                    </div>
+
+                    <div>
+
+                        <input
+                            type="radio"
+                            id="concluida"
+                            name="status"
+                            value="concluida"
+                            {% if tarefa.status == "concluida" %}checked{% endif %}>
+
+                        <label for="concluida">Concluída</label>
+
+                    </div>
+
+                </div>
+
+                <button type="submit">
+                    Salvar Alterações
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
