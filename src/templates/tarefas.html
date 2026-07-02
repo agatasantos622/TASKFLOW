@@ -30,8 +30,21 @@
                         <p>{{ tarefa.descricao }}</p>
 
                         <p>
-                            <strong>Status:</strong> {{ tarefa.status }}
+                            <strong>Status:</strong>
+                            <span class="status">
+                                {{ tarefa.status }}
+                            </span>
                         </p>
+
+                        <div class="task-actions">
+                            <button class="edit-button">
+                                Editar
+                            </button>
+
+                            <button class="delete-button">
+                                Excluir
+                            </button>
+                        </div>
 
                     </div>
 
