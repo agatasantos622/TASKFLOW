@@ -1,36 +1,32 @@
-from flask import Flask, render_template 
+from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 
+tarefas = []
 
 @app.route("/")
 def home():
     return render_template("index.html")
 
-@app.route("/nova-tarefa")
+@app.route("/nova-tarefa", methods=["GET", "POST"])
 def nova_tarefa():
+
+    if request.method == "POST":
+
+        tarefa = {
+            "titulo": request.form["titulo"],
+            "descricao": request.form["descricao"],
+            "status": request.form["status"]
+        }
+
+        tarefas.append(tarefa)
+
+        return redirect(url_for("listar_tarefas"))
+
     return render_template("nova_tarefa.html")
 
 @app.route("/tarefas")
-def tarefas():
-
-    tarefas = [
-        {
-            "titulo": "Estudar Flask",
-            "descricao": "Criar primeira aplicação.",
-            "status": "Em andamento"
-        },
-        {
-            "titulo": "Atualizar LinkedIn",
-            "descricao": "Adicionar o projeto TaskFlow.",
-            "status": "Concluída"
-        },
-        {
-            "titulo": "Estudar SQL",
-            "descricao": "Revisar comandos SELECT.",
-            "status": "Pendente"
-        }
-    ]
+def listar_tarefas():
 
     return render_template(
         "tarefas.html",
