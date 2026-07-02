@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Minhas Tarefas</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+    <body>
+
+        <a href="/" class="back-link">← Voltar</a>
+
+        <main>
+
+            <section class="tasks-container">
+
+                    <h1>Minhas Tarefas</h1>
+
+                    <p>
+                        Acompanhe o andamento das suas atividades.
+                    </p>
+
+                {% for tarefa in tarefas %}
+
+                    <div class="task-card">
+
+                        <h2>{{ tarefa.titulo }}</h2>
+
+                        <p>{{ tarefa.descricao }}</p>
+
+                        <p>
+                            <strong>Status:</strong> {{ tarefa.status }}
+                        </p>
+
+                    </div>
+
+                {% endfor %}
+
+            </section>  
+        </main>
+
+    </body>
+
+</html>
