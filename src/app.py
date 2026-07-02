@@ -25,6 +25,13 @@ def nova_tarefa():
 
     return render_template("nova_tarefa.html")
 
+@app.route("/excluir/<int:id>")
+def excluir_tarefa(id):
+
+    tarefas.pop(id)
+
+    return redirect(url_for("listar_tarefas"))
+
 @app.route("/tarefas")
 def listar_tarefas():
 
