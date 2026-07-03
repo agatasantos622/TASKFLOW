@@ -40,12 +40,12 @@
 
                             <div class="task-actions">
 
-                                <a href="{{ url_for('editar_tarefa', id=loop.index0) }}"
+                                <a href="{{ url_for('atualizar_tarefa', id=tarefa.id) }}"
                                     class="edit-button">
                                     Editar
                                 </a>
 
-                                <a href="{{ url_for('excluir_tarefa', id=loop.index0) }}"
+                                <a href="{{ url_for('remover_tarefa', id=tarefa.id) }}"
                                     class="delete-button">
                                     Excluir
                                 </a>
