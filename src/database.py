@@ -93,6 +93,25 @@ def editar_tarefa(id, titulo, descricao, status):
 
     conexao.close()
 
+def concluir_tarefa(id):
+
+    conexao = sqlite3.connect("taskflow.db")
+
+    cursor = conexao.cursor()
+
+    cursor.execute(
+        """
+        UPDATE tarefas
+        SET status = ?
+        WHERE id = ?
+        """,
+        ("Concluída", id)
+    )
+
+    conexao.commit()
+
+    conexao.close()
+    
 def buscar_tarefa(id):
 
     conexao = sqlite3.connect("taskflow.db")
@@ -111,3 +130,4 @@ def buscar_tarefa(id):
     conexao.close()
 
     return tarefa
+

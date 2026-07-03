@@ -1,4 +1,6 @@
-/* ===== Reset ===== */
+/* =======================================================
+   Reset
+======================================================= */
 
 * {
     margin: 0;
@@ -6,7 +8,9 @@
     box-sizing: border-box;
 }
 
-/* ===== Body ===== */
+/* =======================================================
+   Body
+======================================================= */
 
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -14,7 +18,9 @@ body {
     color: #2c3e50;
 }
 
-/* ===== Main ===== */
+/* =======================================================
+   Main
+======================================================= */
 
 main {
     display: flex;
@@ -92,7 +98,7 @@ form {
 }
 
 /* =======================================================
-   Botões
+   Botões da Home
 ======================================================= */
 
 .buttons {
@@ -136,10 +142,26 @@ form {
     transform: translateY(-2px);
 }
 
+/* =======================================================
+   Botões dos Cards
+======================================================= */
+
 .edit-button,
-.delete-button {
+.delete-button,
+.complete-button {
+    display: inline-block;
+    padding: 10px 18px;
+
     text-decoration: none;
     text-align: center;
+    font-weight: bold;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.edit-button {
     background-color: #2563eb;
     color: white;
 }
@@ -159,8 +181,17 @@ form {
     color: white;
 }
 
+.complete-button {
+    background-color: #16a34a;
+    color: white;
+}
+
+.complete-button:hover {
+    background-color: #15803d;
+}
+
 /* =======================================================
-   Cards de tarefas
+   Cards de Tarefas
 ======================================================= */
 
 .task-card {
@@ -189,27 +220,48 @@ form {
     line-height: 1.5;
 }
 
-.task-card strong {
-    color: #1d4ed8;
+/* =======================================================
+   Status
+======================================================= */
+
+.task-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 18px 0;
+}
+
+.status-label {
+    font-weight: bold;
 }
 
 .status {
     display: inline-block;
+    padding: 6px 14px;
 
-    margin-top: 8px;
-    padding: 6px 12px;
-
-    border-radius: 20px;
-
-    background-color: #dbeafe;
-    color: #1d4ed8;
+    border-radius: 999px;
 
     font-size: 0.9rem;
     font-weight: bold;
 }
 
+.status.pendente {
+    background-color: #fee2e2;
+    color: #dc2626;
+}
+
+.status.em_andamento {
+    background-color: #ffedd5;
+    color: #ea580c;
+}
+
+.status.concluida {
+    background-color: #dcfce7;
+    color: #16a34a;
+}
+
 /* =======================================================
-   Ações dos cards
+   Ações dos Cards
 ======================================================= */
 
 .task-actions {
@@ -235,7 +287,7 @@ form {
 }
 
 /* =======================================================
-   Lista vazia
+   Lista Vazia
 ======================================================= */
 
 .empty-message {

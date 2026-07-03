@@ -15,6 +15,12 @@
 
         <section class="form-container">
 
+            <h1>Editar Tarefa</h1>
+
+            <p>
+                Atualize as informações da tarefa.
+            </p>
+
             <form method="POST">
 
                 <label for="titulo">Título</label>
@@ -23,55 +29,51 @@
                     id="titulo"
                     name="titulo"
                     value="{{ tarefa.titulo }}"
-                    required>
+                    required
+                >
 
                 <label for="descricao">Descrição</label>
                 <textarea
                     id="descricao"
                     name="descricao"
-                    required>{{ tarefa.descricao }}</textarea>
+                    required
+                >{{ tarefa.descricao }}</textarea>
 
                 <div class="status-group">
 
                     <label>Status</label>
 
                     <div>
-
                         <input
                             type="radio"
                             id="pendente"
                             name="status"
                             value="pendente"
-                            {% if tarefa.status == "pendente" %}checked{% endif %}>
-
+                            {% if tarefa.status == "pendente" %}checked{% endif %}
+                        >
                         <label for="pendente">Pendente</label>
-
                     </div>
 
                     <div>
-
                         <input
                             type="radio"
                             id="andamento"
                             name="status"
                             value="em_andamento"
-                            {% if tarefa.status == "em_andamento" %}checked{% endif %}>
-
+                            {% if tarefa.status == "em_andamento" %}checked{% endif %}
+                        >
                         <label for="andamento">Em andamento</label>
-
                     </div>
 
                     <div>
-
                         <input
                             type="radio"
                             id="concluida"
                             name="status"
                             value="concluida"
-                            {% if tarefa.status == "concluida" %}checked{% endif %}>
-
+                            {% if tarefa.status == "concluida" %}checked{% endif %}
+                        >
                         <label for="concluida">Concluída</label>
-
                     </div>
 
                 </div>

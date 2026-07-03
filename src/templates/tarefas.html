@@ -7,66 +7,88 @@
     <link rel="stylesheet" href="../static/css/style.css">
 </head>
 
-    <body>
+<body>
 
-        <a href="/" class="back-link">← Voltar</a>
+    <a href="/" class="back-link">← Voltar</a>
 
-        <main>
+    <main>
 
-            <section class="tasks-container">
+        <section class="tasks-container">
 
-                    <h1>Minhas Tarefas</h1>
+            <h1>Minhas Tarefas</h1>
 
-                    <p>
-                        Acompanhe o andamento das suas atividades.
-                    </p>
+            <p>
+                Acompanhe o andamento das suas atividades.
+            </p>
 
-                {% if tarefas %}
+            {% if tarefas %}
 
-                    {% for tarefa in tarefas %}
+                {% for tarefa in tarefas %}
 
-                        <div class="task-card">
+                    <div class="task-card">
 
-                                <h2>{{ tarefa.titulo }}</h2>
+                        <h2>{{ tarefa.titulo }}</h2>
 
-                                <p>{{ tarefa.descricao }}</p>
+                        <p>{{ tarefa.descricao }}</p>
 
-                                <p>
-                                    <strong>Status:</strong>
-                                    <span class="status">
-                                        {{ tarefa.status }}
-                                    </span>
-                                </p>
+                        <div class="task-status">
 
-                            <div class="task-actions">
+                            <span class="status-label">Status:</span>
 
-                                <a href="{{ url_for('atualizar_tarefa', id=tarefa.id) }}"
-                                    class="edit-button">
-                                    Editar
-                                </a>
+                            <span class="status {{ tarefa.status }}">
 
-                                <a href="{{ url_for('remover_tarefa', id=tarefa.id) }}"
-                                    class="delete-button">
-                                    Excluir
-                                </a>
+                                {% if tarefa.status == "pendente" %}
+                                    Pendente
 
-                            </div>
+                                {% elif tarefa.status == "em_andamento" %}
+                                    Em andamento
+
+                                {% elif tarefa.status == "concluida" %}
+                                    Concluída
+
+                                {% endif %}
+
+                            </span>
 
                         </div>
 
-                    {% endfor %}
+                        <div class="task-actions">
 
-                {% else %}
+                            {% if tarefa.status != "concluida" %}
+                                <a href="{{ url_for('concluir', id=tarefa.id) }}"
+                                   class="complete-button">
+                                    Concluir
+                                </a>
+                            {% endif %}
 
-                    <p class="empty-message">
-                        Nenhuma tarefa cadastrada.
-                    </p>
+                            <a href="{{ url_for('atualizar_tarefa', id=tarefa.id) }}"
+                               class="edit-button">
+                                Editar
+                            </a>
 
-                {% endif %}
+                            <a href="{{ url_for('remover_tarefa', id=tarefa.id) }}"
+                               class="delete-button">
+                                Excluir
+                            </a>
 
-            </section>  
-        </main>
+                        </div>
 
-    </body>
+                    </div>
+
+                {% endfor %}
+
+            {% else %}
+
+                <p class="empty-message">
+                    Nenhuma tarefa cadastrada.
+                </p>
+
+            {% endif %}
+
+        </section>
+
+    </main>
+
+</body>
 
 </html>

@@ -5,7 +5,8 @@ from database import (
     listar_tarefas,
     excluir_tarefa,
     editar_tarefa,
-    buscar_tarefa
+    buscar_tarefa,
+    concluir_tarefa
 )
 
 app = Flask(__name__)
@@ -68,6 +69,13 @@ def atualizar_tarefa(id):
         "editar_tarefa.html",
         tarefa=tarefa
     )
+
+@app.route("/concluir/<int:id>")
+def concluir(id):
+
+    concluir_tarefa(id)
+
+    return redirect(url_for("exibir_tarefas"))
 
 @app.route("/tarefas")
 def exibir_tarefas():
