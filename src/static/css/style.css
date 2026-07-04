@@ -298,6 +298,67 @@ form {
 }
 
 /* =======================================================
+   Flash Messages
+======================================================= */
+
+.flash-container {
+    position: fixed;
+
+    top: 25px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 9999;
+}
+
+.flash-message {
+
+    padding: 16px 28px;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+    font-size: 1rem;
+
+    color: white;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+
+    animation: slideDown .4s ease;
+}
+
+.flash-message.success{
+    background-color: #16a34a;
+}
+
+.flash-message.info {
+    background-color: #2563eb;
+}
+
+.flash-message.error {
+    background-color: #dc2626;
+}
+
+.flash-message.warning {
+    background-color: #ea580c;
+}
+
+@keyframes slideDown{
+
+    from{
+        opacity:0;
+        transform:translateY(-20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* =======================================================
    Footer
 ======================================================= */
 

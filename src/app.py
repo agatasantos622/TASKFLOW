@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, flash
 from database import (
     criar_banco,
     adicionar_tarefa,
@@ -10,6 +10,8 @@ from database import (
 )
 
 app = Flask(__name__)
+
+app.secret_key = "taskflow_secret_key"
 
 criar_banco()
 
@@ -32,6 +34,11 @@ def nova_tarefa():
             status
         )
 
+        flash(
+            "Tarefa cadastrada com sucesso!",
+            "success"
+        )
+
         return redirect(url_for("exibir_tarefas"))
 
     return render_template("nova_tarefa.html")
@@ -40,6 +47,8 @@ def nova_tarefa():
 def remover_tarefa(id):
 
     excluir_tarefa(id)
+
+    flash("Tarefa excluída com sucesso!", "error")
 
     return redirect(url_for("exibir_tarefas"))
 
@@ -61,6 +70,8 @@ def atualizar_tarefa(id):
             status
         )
 
+        flash("Tarefa atualizada com sucesso!", "info")
+
         return redirect(url_for("exibir_tarefas"))
 
     tarefa = buscar_tarefa(id)
@@ -74,6 +85,8 @@ def atualizar_tarefa(id):
 def concluir(id):
 
     concluir_tarefa(id)
+
+    flash("Tarefa concluída com sucesso!", "success")
 
     return redirect(url_for("exibir_tarefas"))
 
