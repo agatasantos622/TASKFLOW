@@ -9,7 +9,7 @@ Sistema web para gerenciamento de tarefas desenvolvido com **Flask** e **SQLite*
 <p align="center">
 
 ![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-3.x-000000?style=for-the-badge&logo=flask&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-3.1.3-000000?style=for-the-badge&logo=flask&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
 ![Versão](https://img.shields.io/badge/Versão-1.0.0-2563EB?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Ativo-16A34A?style=for-the-badge)

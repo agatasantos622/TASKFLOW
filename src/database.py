@@ -1,9 +1,10 @@
 import sqlite3
 
+NOME_BANCO = "taskflow.db"
 
 def criar_banco():
 
-    conexao = sqlite3.connect("taskflow.db")
+    conexao = sqlite3.connect(NOME_BANCO)
 
     cursor = conexao.cursor()
 
@@ -27,7 +28,7 @@ def criar_banco():
 
 def adicionar_tarefa(titulo, descricao, status):
 
-    conexao = sqlite3.connect("taskflow.db")
+    conexao = sqlite3.connect(NOME_BANCO)
 
     cursor = conexao.cursor()
 
@@ -45,7 +46,7 @@ def adicionar_tarefa(titulo, descricao, status):
 
 def listar_tarefas():
 
-    conexao = sqlite3.connect("taskflow.db")
+    conexao = sqlite3.connect(NOME_BANCO)
 
     conexao.row_factory = sqlite3.Row
 
@@ -61,7 +62,7 @@ def listar_tarefas():
 
 def excluir_tarefa(id):
 
-    conexao = sqlite3.connect("taskflow.db")
+    conexao = sqlite3.connect(NOME_BANCO)
 
     cursor = conexao.cursor()
 
@@ -76,7 +77,7 @@ def excluir_tarefa(id):
 
 def editar_tarefa(id, titulo, descricao, status):
 
-    conexao = sqlite3.connect("taskflow.db")
+    conexao = sqlite3.connect(NOME_BANCO)
 
     cursor = conexao.cursor()
 
@@ -95,7 +96,7 @@ def editar_tarefa(id, titulo, descricao, status):
 
 def concluir_tarefa(id):
 
-    conexao = sqlite3.connect("taskflow.db")
+    conexao = sqlite3.connect(NOME_BANCO)
 
     cursor = conexao.cursor()
 
@@ -105,7 +106,7 @@ def concluir_tarefa(id):
         SET status = ?
         WHERE id = ?
         """,
-        ("Concluída", id)
+        ("concluida", id)
     )
 
     conexao.commit()
@@ -114,7 +115,7 @@ def concluir_tarefa(id):
     
 def buscar_tarefa(id):
 
-    conexao = sqlite3.connect("taskflow.db")
+    conexao = sqlite3.connect(NOME_BANCO)
 
     conexao.row_factory = sqlite3.Row
 
