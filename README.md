@@ -57,29 +57,31 @@ Além de atender aos requisitos da disciplina, o projeto também serviu como opo
 
 ---
 
-# 📸 Demonstração
+## 📸 Demonstração
 
-> **As imagens abaixo serão adicionadas na versão final da documentação.**
+A seguir são apresentadas as principais telas do **TaskFlow**, demonstrando as funcionalidades implementadas na primeira versão da aplicação.
 
 ### 🏠 Página Inicial
 
-*(Inserir captura da página inicial)*
+![Página Inicial](docs/images/home.png)
 
-### ➕ Nova Tarefa
+---
 
-*(Inserir captura da tela de cadastro)*
+### ➕ Cadastro de Tarefa
 
-### 📋 Minhas Tarefas
+![Cadastro](docs/images/nova-tarefa.png)
 
-*(Inserir captura da listagem de tarefas)*
+---
 
-### ✏️ Editar Tarefa
+### 📋 Lista de Tarefas
 
-*(Inserir captura da tela de edição)*
+![Lista](docs/images/tarefas.png)
 
-### 🔔 Mensagens de Confirmação
+---
 
-*(Inserir captura das Flash Messages)*
+### ✏️ Edição de Tarefa
+
+![Editar](docs/images/editar-tarefa.png)
 
 ---
 
@@ -287,19 +289,22 @@ Os testes contribuem para aumentar a confiabilidade da aplicação, permitindo i
 
 ---
 
-# 🔄 Integração Contínua
+## 🔄 Integração Contínua
 
-O **TaskFlow** utiliza **GitHub Actions** para automatizar a execução dos testes sempre que alterações são enviadas ao repositório.
+O projeto utiliza **GitHub Actions** para automatizar a execução dos testes sempre que alterações são enviadas para a branch principal (`main`) ou quando um Pull Request é aberto.
 
-A integração contínua permite identificar falhas logo nas primeiras etapas do desenvolvimento, contribuindo para a manutenção da qualidade do código.
+O workflow realiza automaticamente as seguintes etapas:
 
-O fluxo automatizado contempla:
-
+- Configuração do ambiente Python 3.12;
 - Instalação das dependências do projeto;
-- Execução dos testes automatizados;
-- Validação das alterações enviadas ao repositório.
+- Execução dos testes automatizados utilizando Pytest.
 
-> *(Inserir captura da execução do GitHub Actions)*
+Essa estratégia permite identificar falhas rapidamente, garantindo maior confiabilidade e qualidade durante o desenvolvimento.
+
+O arquivo de configuração da Integração Contínua encontra-se em:
+
+```text
+.github/workflows/python-tests.yml
 
 ---
 
