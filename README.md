@@ -8,6 +8,16 @@ Sistema web para gerenciamento de tarefas desenvolvido com **Flask** e **SQLite*
 
 <p align="center">
 
+🎥 **Assista à demonstração do projeto:**
+<br>
+<a href="https://www.linkedin.com/posts/%C3%A1gata-santos-dev_python-flask-sqlite-ugcPost-7480590467341086720-1c41/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFmE7EABUKiP6kx_EaoHd56PscMBNW3hYIY">
+📺 Vídeo de apresentação do TaskFlow
+</a>
+
+</p>
+
+<p align="center">
+
 ![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-3.1.3-000000?style=for-the-badge&logo=flask&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
