@@ -303,12 +303,11 @@ Essa estratégia permite identificar falhas rapidamente, garantindo maior confia
 
 O arquivo de configuração da Integração Contínua encontra-se em:
 
-```text
 .github/workflows/python-tests.yml
 
 ---
 
-# 📋 Gerenciamento do Projeto
+## 📋 Gerenciamento do Projeto
 
 O desenvolvimento do **TaskFlow** foi organizado utilizando a metodologia **Kanban** por meio do **GitHub Projects**.
 
@@ -323,7 +322,6 @@ Durante o desenvolvimento foram utilizadas as seguintes etapas:
 
 Essa organização contribuiu para um desenvolvimento incremental, facilitando o acompanhamento das funcionalidades implementadas, das correções realizadas e das melhorias planejadas.
 
-> *(Inserir captura do quadro Kanban)*
 
 ---
 
